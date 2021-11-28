@@ -1,13 +1,39 @@
 import React from 'react';
 
 import UserPanel from "../UserPanel";
-import { Wrapper } from './styles';
+import WorkSection from "../WorkSection";
+
+import { WrapperCol, WrapperRow } from './styles';
 
 function Container() {
+    const data = [
+        {
+            en: "mother",
+            pl: "mama",
+        },
+        {
+            en: "father",
+            pl: "tata",
+        },
+        {
+            en: "daughter",
+            pl: "córka",
+        },
+        {
+            en: "son",
+            pl: "syn",
+        },
+    ];
+
     return (
-        <Wrapper>
-            <UserPanel />
-        </Wrapper>
+        <>
+            <WrapperRow>
+                <UserPanel />
+            </WrapperRow>
+            <WrapperCol>
+                <WorkSection data={data}/>
+            </WrapperCol>
+        </>
     );
 }
 
